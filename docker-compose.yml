@@ -9,13 +9,6 @@ services:
     volumes:
       - ./form_app/src:/var/www/
     env_file: .env
-#    environment:
-#      - MONGO_USER=citizix
-#      - MONGO_PASSWORD=S3cret
-#      - MONGO_HOST=mongodb
-#      - MONGO_PORT=27017
-#    command: >
-#      sh -c 'python main.py'
   mongodb:
     image: mongo:4.4.6
     ports:
@@ -23,6 +16,3 @@ services:
     volumes:
       - ~/apps/mongo:/data/db
     env_file: .env
-#    environment:
-#      - MONGO_INITDB_ROOT_USERNAME=citizix
-#      - MONGO_INITDB_ROOT_PASSWORD=S3cret
